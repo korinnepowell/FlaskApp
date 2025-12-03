@@ -16,9 +16,11 @@ It provides user authentication with strong password enforcement, logging of use
 - 🐱 **Cat Theme**
 ---
 
-## 🚀 Getting Started
+## 📸 Screenshot
+<img width="957" height="446" alt="image" src="https://github.com/user-attachments/assets/3dce1509-a2f8-44b5-86a2-234fc520c520" />
 
-### 1. Clone the Repository
+
+### Clone the Repository
 ```bash
 git clone https://github.com/korinnepowell/FlaskApp.git
-cd FlaskApp
+
