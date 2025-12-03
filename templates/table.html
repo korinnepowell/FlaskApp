@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block heading %} <h1>Table Page</h1> {% endblock %}
+{% block h2 %}<h2> TOP FIVE CAT FOODS</h2>{% endblock %}
+
+{% block imgChange %}
+        <a target="_blank" href="static/CSS/images/food.jpg">
+            <img src="static/CSS/images/food.jpg" alt="food" width="320" height="320">
+        </a>
+    {% endblock %}
+{% block p %}
+<p>
+    Adult cats should be fed a balanced diet to maintain healthy tissues and body systems. A good balanced diet
+should consist of 50-60% protein and 30-50% fat. Cats are obligate carnivores, wich means that they 
+rely on meat products that are high in protein, moderate fats, and minimal carbohydrates.
+ Proper nutrition will promote a long and healthy life. Below is a table that shows the top 5 
+ foods for a healthy kitty.</p>{% endblock %}
+ {% block ol %}
+ <table style ="width:100%">
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>type</th>
+      <th>Protein Analysis</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Smalls Human-grade fresh cat food</td>
+      <td>fresh food/sealed & refrigerated</td>
+      <td>18.5-15%</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Hill's Science Diet</td>
+        <td>Dry food</td>
+        <td>30% </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Tiki Cat</td>
+        <td>Wet/canned food</td>
+        <td>14-17%</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>cat person</td>
+        <td>dry and wet food</td>
+        <td>54-66%</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Purina Beyond</td>
+        <td>dry food</td>
+        <td>30-50%</td>
+      </tr>
+  </table>
+            {% endblock %}

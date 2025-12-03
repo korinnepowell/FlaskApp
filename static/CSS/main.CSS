@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "kitty";
+    src: url(/static/CSS/fonts/kittypaws.ttf);
+  }
+.heading{
+    grid-area: header;
+}
+.navbar{
+    grid-area: navg;
+}
+.theimg{
+    grid-area: image ;
+}
+.thelist{
+    grid-area: Rlist;
+}
+.footer{
+    grid-area: foot;
+}
+
+.flaskgrid {
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "navg navg navg navg"
+                         "image image Rlist Rlist"
+                         "image image Rlist Rlist"
+                         "image image Rlist Rlist"
+                         "foot foot foot foot";
+    gap: 1px; 
+    background-color: white;
+    padding: 0px;
+    box-shadow: 5px 12px 18px 10px; 
+    margin: 0;
+} 
+.flaskgrid >div{
+    background-color: white;
+    padding: 0;
+    margin: 0;
+
+}  
+body{
+    margin: 0;
+    font-family: kitty, Arial, Helvetica, sans-serif;
+   
+   
+}
+.LogRegH1{
+    padding-left: 2%;
+}
+h1{
+    text-align: left;
+    color: brown;
+}
+h2{
+    text-align: center;
+    color: brown;
+}
+h3{
+    text-align: center;
+    color:rgb(92, 181, 199);
+}
+li{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    padding:2%;
+}
+.navbar li a {
+    display: block;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    text-decoration:  none;
+    text-align: center;
+}
+.navbar ul{
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+    background-color:rgb(92, 181, 199);
+}
+.navbar li{
+    display: inline;
+    float: left;
+}
+.navbar li a:hover{
+    background-color: whitesmoke;
+}
+
+.footer{
+    text-align: center;
+}
+.registerPage {
+    background-color: rgb(92, 181, 199);
+}
+.loginPage{
+    background-color: rgb(92, 181, 199);
+}
+
+table, th, td {
+    border:1px solid black;
+}
+form{
+    padding-left: 2%;
+}

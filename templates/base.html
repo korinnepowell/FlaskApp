@@ -1,0 +1,71 @@
+<!--Korinne Bubb SDEV 300-->
+<!DOCTYPE html>
+<html lang="en">
+    <!--created a base template to hold the basic web app structure-->
+    <!--base.html is the parent template-->
+    <!--each of the child templates will inherit this layout using jinja2 syntax-->
+    <head>
+        <!--title, meta tags, and link to stylesheet-->
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="'X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+        {% block css %}{% endblock %}
+    </head>
+    <body>{% block body %}
+        <!--grid container to create a nice layout for pages-->
+        <div class="flaskgrid">
+            <header>
+                <div class="heading">{% block heading %}<h1>MY FIRST FLASK PAGE</h1>{% endblock %}</div> 
+                </header>
+                <!--created a navigation bar between pages(index + 3 content pages)-->
+                <div class="navbar">
+                    <!--navbar utilizes an unordered list-->
+                    <ul>
+                        <li><a href="index.html"> HOME PAGE </a></li>
+                        <li><a href="pageone.html"> SUGAR </a></li>
+                        <li><a href="pagethree.html"> NEFFIE </a></li>
+                        <li><a href="pagetwo.html"> CLEO </a></li>
+                        <li><a href="table.html">What to Feed?</a></li>
+                        <li><a href="{{url_for('change_password')}}">Change Password</a></li>
+                        <li><a href="{{url_for('login')}}">log out</a></li>
+                    </ul>
+                </div>
+                <div class="theimg">{% block imgChange %}
+                    <a target="_blank" href="static/CSS/images/kittypaws.jpg">
+                        <img src="static/CSS/images/kittypaws.jpg" alt="" width="390" height="390">
+                    </a>
+                    {% endblock %}
+                </div>
+                <div class="thelist">
+                    {% block h2 %}<h2> Welcome To My Cats WebApp </h2>{% endblock %}
+                    {% block h3 %}<h3> My Crazy Cat Lady Page  </h3> {% endblock %}
+                    {% block p %}<p>I decided to have some fun with this webapp
+                        and create it based on somthing I have a passion for....my cats!
+                        Silly...I know; however, I am somewhat of a "crazy cat lady" (lol).
+                        So they are getting a fan page. Plus I was drawing a blank on website ideas. 
+                        I have three cats. All three are himalayan (color-point)
+                        persian cats. Below there will be three links one for grooming, healthy diet,
+                        and what is a himalayan persian. One is considered a peke-faced persian since 
+                        he has an extremely short nose giving him a flat faced appearence. The 
+                        other two are considered baby doll face since they do not have quite the pushed in look. 
+                        Each page will include a fun little ordered list about each kitty. 
+                        Located in the footer will be the date and time. All h1 headers have been changed to 
+                        brown and all the styles placed in a CSS file.
+                    </p>{% endblock %}
+                    <!--ordered list created here this one holds 3 weblinks-->
+                    <ol>{% block ol %}
+                        <li><a href="https://www.thesprucepets.com/himalayan-cat-breed-profile-4691062#:~:text=The%20Himalayan%20cat%20is%20a%20cross%20between%20the,Himmies%2C%20are%20gentle%20giants%20of%20the%20cat%20world." target="_blank">What is a Himalayan Persian?</a></li>
+                        <li><a href="https://www.hepper.com/himalayan-cat-grooming/" target="_blank">Himalayan Grooming</a></li>
+                        <li><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feeding-your-cat" target="_blank">Whats a healthy cat diet?</a></li>
+                        {% endblock %}
+                    </ol>
+                </div>
+                <div class ="footer">
+                    <p>{{ datetime }}</p>
+                </div>
+        </div>
+            {% endblock %}
+    </body>
+</html>
